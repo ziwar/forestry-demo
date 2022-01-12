@@ -24,3 +24,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- Posts/One/test.md
