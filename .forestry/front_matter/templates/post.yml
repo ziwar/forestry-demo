@@ -1,40 +1,26 @@
 ---
-label: post
-hide_body: false
+label: Post
+hide_body: true
 fields:
 - name: title
-  label: Title
   type: text
-  hidden: false
-  default: ''
-- type: text
-  label: Sub Heading
-  name: sub_heading
-  default: ''
-- name: date
-  label: Publish Date
-  type: datetime
-  hidden: false
-  default: ''
-- name: tags
-  label: Tags
-  type: tag_list
-  hidden: false
-  default: ''
-- type: file
-  name: banner_image
-  label: Banner Image
-  description: Ideal dimensions 2500px by 1200px
-- type: list
-  name: related_posts
-  label: Related Posts
   config:
-    use_select: true
-    source:
-      type: pages
-      section: posts
-- name: layout
-  label: Layout
-  type: text
-  hidden: true
-  default: post
+    required: true
+  label: Title
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Body
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - post
+  config:
+    min: 
+    max: 
